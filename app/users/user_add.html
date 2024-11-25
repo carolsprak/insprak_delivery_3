@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário - Insprak Delivery</title>
+    <link rel="stylesheet" href="../../assets/styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1> </h1>
+        <nav>
+            <a href="../../index.html">Entrar</a>
+            <a href="#">Cadastro</a>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="container">
+            <div class="logo-container">
+                <img src="../../assets/images/insprak.png" width="50%" height="50%" alt="Logo do Delivery" id="logo">
+            </div>
+            <div class="form-container">
+                <h2>Cadastrar Usuário</h2>
+                <form id="registerForm" method="POST" action="https://insprak-delivery-api-3-388c3302da22.herokuapp.com/users">
+                    <label for="firstName">Nome:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    <label for="lastName">Sobrenome:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <label for="cpfCnpj">CPF/CNPJ:</label>
+                    <input type="text" id="cpfCnpj" name="cpfCnpj" required>
+                    <label for="birthDate">Data de Nascimento:</label>
+                    <input type="date" id="birthDate" name="birthDate" required>
+    
+                    <label>Perfis:</label>
+                    <div class="profile-checkboxes">
+                        <label><input type="checkbox" name="profiles" value="Cliente"> Cliente</label>
+                        <label><input type="checkbox" name="profiles" value="Entregador"> Entregador</label>
+                        <label><input type="checkbox" name="profiles" value="Prestador"> Prestador de Serviço</label>
+                    </div>
+    
+                    <h2>Endereço Principal:</h2>
+                    <label for="street">Rua:</label>
+                    <input type="text" id="street" name="addresses[0].street" required>
+                    <label for="number">Número:</label>
+                    <input type="text" id="number" name="addresses[0].number" required>
+                    <label for="complement">Complemento:</label>
+                    <input type="text" id="complement" name="addresses[0].complement">
+                    <label for="city">Cidade:</label>
+                    <input type="text" id="city" name="addresses[0].city" required>
+                    <label for="state">Estado:</label>
+                    <select id="state" name="addresses[0].state" required>
+                        <option value="">Selecione um estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>                     
+                    <label for="zipCode">CEP:</label>
+                    <input type="text" id="zipCode" name="addresses[0].zipCode" required>
+                     
+    
+                    <button type="submit">Cadastrar</button>
+                </form>
+                <div><h4></h4></div>
+                <script src="script.js"></script>
+            </div>        
+        </div>
+      </div> 
+    <footer>
+        <p class="version">&copy; 2024 Insprak. Todos os direitos reservados. v2.0.0</p> 
+      </footer>
+</body>
+</html>

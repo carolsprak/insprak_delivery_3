@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insprak Delivery</title>
+  <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+<body>
+  <header>
+    <h1></h1>
+    <nav> 
+        <a href="#">Entrar</a>
+        <a href="./app/users/user_add.html">Cadastro</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="container">
+        <div class="logo-container">
+            <img src="./assets/images/insprak.png" width="50%" height="50%" alt="Logo do Delivery" id="logo">
+        </div>
+        <div class="login-container">
+            <h2>Entrar</h2>
+            <form id="loginForm">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div id="message"></div>
+        </div>        
+    </div>
+  </div>
+  
+  <script src="./assets/scripts/script.js"></script>
+</body>
+<footer>
+  <p class="version">&copy; 2024 Insprak. Todos os direitos reservados. v2.0.0</p> 
+</footer>
+</html>
