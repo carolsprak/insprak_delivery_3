@@ -60,9 +60,13 @@ function ocultarConteudo() {
     logoutBtn.style.display = 'none';
 }
 
+// Adiciona o event listener para capturar o envio do formulário
+document.getElementById('loginForm').addEventListener('submit', fazerLogin);
+
+
 // Função para verificar as credenciais e fazer login
 function fazerLogin(event) {
-    const form = document.getElementById('loginForm');//.addEventListener('submit', function(event) {
+    //const form = document.getElementById('loginForm');//.addEventListener('submit', function(event) {
     event.preventDefault(); // Impede o envio padrão do formulário
   
     const username = document.getElementById('username').value;
