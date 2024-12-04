@@ -59,10 +59,7 @@ function ocultarConteudo() {
     welcomeMessage.style.display = 'none';
     logoutBtn.style.display = 'none';
 }
-
-// Adiciona o event listener para capturar o envio do formulário
-document.getElementById('loginForm').addEventListener('submit', fazerLogin);
-
+ 
 // Função para verificar as credenciais e fazer login
 function fazerLogin(event) {
     const form = document.getElementById('loginForm');//.addEventListener('submit', function(event) {
@@ -123,6 +120,7 @@ function fazerLogin(event) {
 
 // Função para obter dados do usuário por ID
 function getUserById(userId) {
+  console.log('AQUI' , userId);
 
   fetch(`https://insprak-delivery-api-3-388c3302da22.herokuapp.com/users/${userId}`)
       .then(response => {
