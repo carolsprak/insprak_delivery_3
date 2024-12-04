@@ -5,6 +5,12 @@ function validarCep(cep) {
     return cepRegex.test(cep); // Retorna true se o CEP for válido
 }
 
+// Função para validar Cidade
+function validarCidade(cidade) {
+    const regex = /[A-Za-zÀ-ÖØ-öø-ÿ]{2,}/;
+    return regex.test(cidade);
+}
+
 // Função para validar se ao menos um perfil foi selecionado
 function validarPerfis(profiles) {     
     return profiles.length > 0; // Retorna true se ao menos um perfil estiver selecionado
@@ -116,6 +122,14 @@ function cadastrarUsuario(event) {
         return;
     }
 
+    // Obtém o valor do campo cidade
+    const cidade = document.getElementById('city').value;
+
+    // Valida a cidade
+    if (!validarCidade(cidade)) {
+        alert('O campo "Cidade" deve conter pelo menos 2 letras.');
+        return;
+    }
     const password = document.getElementById('password').value;
 
     // Valida senha
