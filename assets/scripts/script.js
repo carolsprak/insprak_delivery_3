@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 // Elementos do DOM
 const header = document.getElementById('header');
 const nav = document.getElementById('nav');
@@ -175,3 +176,4 @@ if (usuarioLogado) {
   // Exibe conteúdo após login ao carregar a página
   exibirConteudo(usuario);
 }
+});
